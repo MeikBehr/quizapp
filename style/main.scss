@@ -5,28 +5,43 @@
 @use "themes";
 @use "vendors";
 
-/* abstracts müssen hier nicht geladen werden, dazu später mehr 
-die kommen dann in der jeweiligen scss datei separat!
-
-@use "../abstracts/" as *;
-@use "sass:color";
-@use "sass:math";
-*/ 
 
 
+// That way we can import whole bootstrap via SASS
 
-/**   Ordnderstruktur bei SCSS hier als Beispiel:
+// Variable overrides first
+$primary: #900;
+$enable-shadows: true;
+$prefix: "mo-";
 
-/style                  <- css rein
-
-/style/abstracts        <- Mixins, Funktionen und Platzhalter
-/style/base             <- grundlegende Styles, z.B. CSS-Reset, Schriftarten, html, body
-/style/components       <- kleinere Komponenten wie Buttons, Formulare usw
-/style/layout           <- Allgemeines Layout, z.B. Navigationsleiste
-/style/pages            <- Code für einzelne Seiten die sehr aufwendig sind
-/style/themes           <- für Themes, z.B. heller/dunkler Modus
-/style/vendors          <- css-code, der von anderen Projekten lädt, z.B. scss von Bootstrap oder so
-/style/main.scss
+// Then import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 
+
+
+/* if only some modules are needed, one can directly import into SASS via:
+
+// Functions first
+@import "../node_modules/bootstrap/scss/functions";
+
+// Variable overrides second
+$primary: #900;
+$enable-shadows: true;
+$prefix: "mo-";
+
+// Required Bootstrap imports
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// Optional components
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api";
 */
