@@ -1,0 +1,32 @@
+@use "base";
+@use "components";
+@use "layout";
+@use "pages";
+@use "themes";
+@use "vendors";
+
+/* abstracts müssen hier nicht geladen werden, dazu später mehr 
+die kommen dann in der jeweiligen scss datei separat!
+
+@use "../abstracts/" as *;
+@use "sass:color";
+@use "sass:math";
+*/ 
+
+
+
+/**   Ordnderstruktur bei SCSS hier als Beispiel:
+
+/style                  <- css rein
+
+/style/abstracts        <- Mixins, Funktionen und Platzhalter
+/style/base             <- grundlegende Styles, z.B. CSS-Reset, Schriftarten, html, body
+/style/components       <- kleinere Komponenten wie Buttons, Formulare usw
+/style/layout           <- Allgemeines Layout, z.B. Navigationsleiste
+/style/pages            <- Code für einzelne Seiten die sehr aufwendig sind
+/style/themes           <- für Themes, z.B. heller/dunkler Modus
+/style/vendors          <- css-code, der von anderen Projekten lädt, z.B. scss von Bootstrap oder so
+/style/main.scss
+
+
+*/
