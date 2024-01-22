@@ -3,7 +3,6 @@
 function init() {
 
 	document.getElementById('all-questions').innerHTML = questions.length;
-
 	showQuestion();
 }
 
@@ -38,4 +37,14 @@ function answer(selection) {
 	document.getElementById('next-button').removeAttribute("disabled");
 	// document.getElementById('next-button').disabled = false;
 
+}
+
+
+function nextQuestion() {
+	if (currentQuestion < questions.length) {
+		currentQuestion++;
+	} else {
+		currentQuestion = 0;
+	}
+	showQuestion();
 }
