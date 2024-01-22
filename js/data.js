@@ -1,3 +1,4 @@
+let currentQuestion = 0;
 let questions = [
 
     {
