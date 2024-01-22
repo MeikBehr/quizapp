@@ -1,11 +1,6 @@
 "use strict";
 
-/* sofern im HTML steht:
-	<body onload="init()"> 
+function init() {
 
+}
 
-muss hier rein:
-
-function init() {}
-
-*/
