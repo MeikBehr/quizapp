@@ -3,17 +3,25 @@
 @use "sass:color";
 @use "sass:math";
 
+
 .container {
     background-color: #007AFF;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
 
 .quiz-card {
     width: 30rem;
+
+    & > img {
+        max-height: 20rem;
+        width: auto;
+        object-fit: contain;
+    }
+
 }
 
 

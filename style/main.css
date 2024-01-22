@@ -21,14 +21,20 @@ body {
 
 .container {
   background-color: #007AFF;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .quiz-card {
   width: 30rem;
+}
+.quiz-card > img {
+  max-height: 20rem;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .question-footer {
