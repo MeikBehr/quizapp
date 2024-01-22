@@ -7,28 +7,21 @@
 
 
 
-// That way we can import whole bootstrap via SASS
 
-// Variable overrides first
-// $primary: #900;
-// $enable-shadows: true;
-// $prefix: "mo-";
-// Then import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
 
-// @import "../node_modules/bootstrap/scss/bootstrap";
+
+
+.bg-success, .bg-danger {
+    color: white;
+} 
+
+
 
 
 
 
 /* if only some modules are needed, one can directly import into SASS via:
-
-// Functions first
-@import "../node_modules/bootstrap/scss/functions";
-
-// Variable overrides second
-$primary: #900;
-$enable-shadows: true;
-$prefix: "mo-";
 
 // Required Bootstrap imports
 @import "../node_modules/bootstrap/scss/variables";
