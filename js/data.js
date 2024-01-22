@@ -38,7 +38,7 @@ let questions = [
     },
 
     {
-        'question': 'Wie wöhlst Du alle Elemente vom Typ &lt;a&gt; mit dem Attribut title aus?',
+        'question': 'Wie wählst Du alle Elemente vom Typ &lt;a&gt; mit dem Attribut title aus?',
         'answer_1': 'a[title]{...}',
         'answer_2': 'a > title {...}',
         'answer_3': 'a.title {...}',
