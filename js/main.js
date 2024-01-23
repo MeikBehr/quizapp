@@ -1,8 +1,11 @@
 "use strict";
 
+let correctAnswers = 0;
+
 function init() {
 
 	document.getElementById('all-questions').innerHTML = questions.length;
+	document.getElementById('header-image').src = './src/img/logo.png';
 	showQuestion();
 }
 
@@ -11,7 +14,10 @@ function init() {
 function showQuestion() {
 	if (currentQuestion >= questions.length) {
 		document.getElementById('endScreen').style.display = 'unset';
-		document.getElementById('questionBody').style.display = 'none';		
+		document.getElementById('questionBody').style.display = 'none';
+		document.getElementById('correct-answers').innerHTML = correctAnswers;
+		document.getElementById('all-questions-end').innerHTML = questions.length;
+		document.getElementById('header-image').src = './src/img/tropy.png';
 	} 
 	else 
 	{
@@ -34,6 +40,7 @@ function answer(selection) {
 
 	if (isAnswerCorrect) {
 		document.getElementById(selection).parentNode.classList.add('bg-success');
+		correctAnswers++;
 	} 
 	else 
 	{
@@ -65,3 +72,4 @@ function resetAnswerButtons() {
 	document.getElementById('answer_3').parentNode.classList.remove('bg-danger');
 	document.getElementById('answer_4').parentNode.classList.remove('bg-danger');
 }
+

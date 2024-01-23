@@ -54,6 +54,10 @@ body {
   color: white;
 }
 
+.width-100 {
+  width: 100%;
+}
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
