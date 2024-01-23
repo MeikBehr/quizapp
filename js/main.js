@@ -3,7 +3,6 @@
 let correctAnswers = 0;
 
 function init() {
-
 	document.getElementById('all-questions').innerHTML = questions.length;
 	document.getElementById('header-image').src = './src/img/logo.png';
 	showQuestion();
@@ -18,10 +17,17 @@ function showQuestion() {
 		document.getElementById('correct-answers').innerHTML = correctAnswers;
 		document.getElementById('all-questions-end').innerHTML = questions.length;
 		document.getElementById('header-image').src = './src/img/tropy.png';
+		document.getElementById('progress-bar').parentNode.classList.add('d-none');
 	} 
 	else 
 	{
+
+		let percent = ((currentQuestion + 1) / questions.length).toFixed(2) * 100;
 		let question = questions[currentQuestion];
+		document.getElementById('progress-bar').innerHTML = percent;
+		document.getElementById('progress-bar').style.width = `${percent}%`;
+		document.getElementById('progress-bar').ariaValueNow = `${percent}`;
+		document.getElementById('progress-bar').parentNode.classList.remove('d-none');
 		document.getElementById('questionText').innerHTML = question['question'];
 		document.getElementById('answer_1').innerHTML = question['answer_1'];  
 		document.getElementById('answer_2').innerHTML = question['answer_2'];
