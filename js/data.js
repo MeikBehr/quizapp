@@ -1,4 +1,10 @@
 let currentQuestion = 0;
+let correctAnswers = 0;
+
+const AUDIO_correct = new Audio('./src/audio/right.mp3');
+const AUDIO_wrong = new Audio('./src/audio/buzzer-wrong.mp3');
+
+
 let questions = [
 
     {
