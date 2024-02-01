@@ -61,6 +61,24 @@ let questions = [
         'right_answer': 4,
     },
 
+    {
+        'question': 'Welcher JavaScript Variablentyp darf im Programmverlauf nicht mehr verändert werden?',
+        'answer_1': 'const',
+        'answer_2': 'var',
+        'answer_3': 'let',
+        'answer_4': 'konst',
+        'right_answer': 1,
+    },
+
+    {
+        'question': 'Wie nennt man folgendes Zeichen: `',
+        'answer_1': 'backslash',
+        'answer_2': 'backtick',
+        'answer_3': 'back-o-troph',
+        'answer_4': 'back-comma',
+        'right_answer': 2,
+    },
+
 ];
 
 
