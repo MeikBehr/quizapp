@@ -63,7 +63,6 @@ function answerIsWrong(question, selection) {
 }
 
 
-
 function answer(selection) {
 	let question = questions[currentQuestion];
 	let selectedQuestionNumber = parseInt(selection.slice(-1));
@@ -91,7 +90,6 @@ function resetAnswerButtons() {
 	document.getElementById('answer_3').parentNode.classList.remove('bg-danger');
 	document.getElementById('answer_4').parentNode.classList.remove('bg-danger');
 }
-
 
 
 function restartGame() {
